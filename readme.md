@@ -1,0 +1,1 @@
+light-server -s public -p 8000

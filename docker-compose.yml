@@ -1,0 +1,10 @@
+services:
+  emcc-build:
+    container_name: wasm-builder
+    build: ./wasm
+    tty: true
+    environment:
+      - CMAKE_TOOLCHAIN_FILE=/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+    volumes:
+      - .:/src
+    command: bash /src/build.sh
